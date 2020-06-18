@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "701dd496-6880-43da-9d67-659a0633bb37",
+		"name": "Tetsuyu APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"test\",\n\t\"password\": \"Test@12345\",\n\t\"email\": \"abc@abc.com\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44313/Account/register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44313",
+					"path": [
+						"Account",
+						"register"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "testpassword",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"test\",\n\t\"password\": \"Test@12345\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44313/Account/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44313",
+					"path": [
+						"Account",
+						"login"
+					]
+				},
+				"description": "Login to get the cookie"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsersData",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRlc3QiLCJlbWFpbCI6ImFiY0BhYmMuY29tIiwibmJmIjoxNTkyNDg0NzE4LCJleHAiOjE1OTI0ODQ3NzgsImlhdCI6MTU5MjQ4NDcxOCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMjIvIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMjIvIn0.qk3eIXE6ibpLd-4-HYI2bCBC-hPmRK7GLJjhx6v3-Yg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44313/user/GetAllUsersData",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44313",
+					"path": [
+						"user",
+						"GetAllUsersData"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "97475448-eea4-4d16-a975-bde8dde1b903",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "461bcc34-0496-45fc-9da3-e86ebd1c4830",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
